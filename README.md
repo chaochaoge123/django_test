@@ -4,3 +4,4 @@ mysql
 redis
 admin
 cache
+Signal
