@@ -13,3 +13,6 @@ class Dz_user(admin.ModelAdmin):
 
 
 admin.site.register(User_info, Dz_user)
+
+
+"""创建admin用户 python3 manage createsuperuser"""
