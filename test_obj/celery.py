@@ -21,3 +21,8 @@ app.config_from_object('django.conf:settings')
 
 # Celery加载所有注册的应用
 app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
+
+
+""" 
+命令启动 同manage.py文件目录下： celery -A test_obj worker --pool=solo -l info
+"""
