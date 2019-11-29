@@ -1,17 +1,23 @@
 
-from __future__ import absolute_import ,unicode_literals
-import os
+# coding:utf-8
+from __future__ import absolute_import, unicode_literals
+
 from celery import Celery
+from django.conf import settings
+import os
 
-os.environ .setdefault("DJANGO_SETTINGS_MODULE", "test_obj.settings")
+# 获取当前文件夹名，即为该Django的项目名
+project_name = os.path.split(os.path.abspath('.'))[-1]
+project_settings = '%s.settings' % project_name
 
-app=Celery("test_obj")
+# 设置环境变量
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', project_settings)
 
-app.config_from_object('django.conf:settings', namespace='CELERY')
+# 实例化Celery
+app = Celery('tasks', broker='redis://:qqcqqc@172.29.32.104:6379/3')
 
-app.autodiscover_tasks()
+# 使用django的settings文件配置celery
+app.config_from_object('django.conf:settings')
 
-
-@app.task(bind=True)
-def debug_task():
-    print("celery_go_go_go")
+# Celery加载所有注册的应用
+app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)

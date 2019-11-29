@@ -55,7 +55,11 @@ def tset_user_cz(request):
     return JsonResponse(data=info, safe=False)
 
 
-
+from .import tasks
+def add(request):
+    tasks.add.delay(1,2)
+    result = {'code': 0, 'msg': 'hello'}
+    return JsonResponse(result)
 
 
 

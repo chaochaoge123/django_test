@@ -23,5 +23,6 @@ urlpatterns = [
     path('create/signals/', views.create_signal),
     path('tem/test/', views.tem_test),
     path('redis/test/', views.resdis_test),
-    path('tset/user/cz/', views.tset_user_cz)
+    path('tset/user/cz/', views.tset_user_cz),
+    path('test/celery/', views.add)
 ]
