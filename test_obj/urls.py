@@ -16,12 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from test_one import views
+from django.conf.urls import url
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('create/signals/', views.create_signal),
-    path('tem/test/', views.tem_test),
-    path('redis/test/', views.resdis_test),
-    path('tset/user/cz/', views.tset_user_cz)
+    url('admin/', admin.site.urls),
+    url('create/signals/', views.create_signal),
+    url('tem/test/', views.tem_test),
+    url('redis/test/', views.resdis_test),
+    url('tset/user/cz/', views.tset_user_cz),
+    url('celery/test/',views.celery_t)
 ]

@@ -1,3 +1,4 @@
+# encoding: utf-8
 """
 Django settings for test_obj project.
 
@@ -38,7 +39,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'test_one.apps.TestOneConfig',
+    # 'djcelery',
 ]
+
+# celery worker backend 配置
+# from tasks import celery
+#
+# BROKER_BACKEND='redis'
+# BOOKER_URL='redis://:qqcqqc@172.29.32.104:6379/5'
+# CELERY_RESULT_BACKEND='redis://:qqcqqc@172.29.32.104:6379/6'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

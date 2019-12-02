@@ -3,11 +3,8 @@ import time
 import django.dispatch
 from django.dispatch import receiver
 from django.http import JsonResponse
-import redis
-from django.db.backends.mysql import operations,base
-from test_one.tools import POOL,create_user_cache,get_user_cache
+from test_one.tools import create_user_cache,get_user_cache
 from django_redis import get_redis_connection
-from django.core.cache import cache
 from test_one.models.user import User_info
 
 
@@ -55,7 +52,12 @@ def tset_user_cz(request):
     return JsonResponse(data=info, safe=False)
 
 
+from tasks import tasks1
 
+
+def celery_t(request):
+    tasks1.add.delay(3, 4)
+    return HttpResponse("ok")
 
 
 
