@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'test_one.apps.TestOneConfig',
+    'haystack'
 ]
 
 MIDDLEWARE = [
@@ -158,3 +159,13 @@ CELERY_RESULT_SERIALIZER = 'json'
 
 # celery时区设置，使用settings中TIME_ZONE同样的时区
 CELERY_TIMEZONE = TIME_ZONE
+
+
+# elasticsearch配置
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
+        'URL': 'http://172.29.32.104:9200/',
+        'INDEX_NAME': 'haystack',
+    },
+}
