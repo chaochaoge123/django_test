@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea4cf74d-e75e-4081-9b50-841dcb392d54" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/search/indexes/test_one/item_text.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/search/indexes/test_one/user_info_text.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_obj/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_obj/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_obj/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_obj/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_one/management/commands/elasticsearch_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_one/management/commands/elasticsearch_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_one/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_one/models/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_one/search_indexes.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_one/search_indexes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_one/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_one/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -146,7 +138,7 @@
       <option name="presentableId" value="Default" />
       <updated>1574670703954</updated>
       <workItem from="1575334290435" duration="29654000" />
-      <workItem from="1575436962822" duration="11096000" />
+      <workItem from="1575436962822" duration="13549000" />
     </task>
     <servers />
   </component>

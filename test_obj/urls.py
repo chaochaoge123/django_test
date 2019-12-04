@@ -25,5 +25,5 @@ urlpatterns = [
     path('redis/test/', views.resdis_test),
     path('tset/user/cz/', views.tset_user_cz),
     path('test/celery/', views.add),
-    path('search/es/', views.es_tool)
+    # path('search/es/', views.es_tool)
 ]
