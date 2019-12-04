@@ -1,0 +1,4 @@
+{{ object.name }}
+{{ object.mobile }}
+{{ object.remarks }}
+{{ object.user_id }}

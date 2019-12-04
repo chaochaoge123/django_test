@@ -24,5 +24,6 @@ urlpatterns = [
     path('tem/test/', views.tem_test),
     path('redis/test/', views.resdis_test),
     path('tset/user/cz/', views.tset_user_cz),
-    path('test/celery/', views.add)
+    path('test/celery/', views.add),
+    path('search/es/', views.es_tool)
 ]

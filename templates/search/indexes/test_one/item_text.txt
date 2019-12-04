@@ -1,0 +1,2 @@
+{{ object.item_no }}
+{{ object.case_no }}

@@ -9,6 +9,7 @@ from test_one.tools import POOL,create_user_cache,get_user_cache
 from django_redis import get_redis_connection
 from django.core.cache import cache
 from test_one.models.user import User_info
+from haystack.views import SearchView as _SearchView
 
 
 # 信号

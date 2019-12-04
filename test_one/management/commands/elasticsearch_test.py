@@ -2,6 +2,8 @@
 # encoding: utf-8
 
 import redis
+import json
+from test_one.models.user import User_info,Item
 from django.core.management.base import BaseCommand
 from django.shortcuts import render,HttpResponse
 from django.core.cache import cache
@@ -22,16 +24,19 @@ class Command(BaseCommand):
             'text': 'Elasticsearch: cool. bonsai cool.',
             'timestamp': datetime.now(),
         }
+        data = {'name': 'hello',
+                'mobile': '2367299',
+                'remark': '明月'}
 
         # 创建索引
         # ret = es.indices.create(index="one")
-        # print(es.indices.delete(index="one"),"KKKKKKKKKKKKK")
+        # print(es.delete(index="one"),"KKKKKKKKKKKKK")
         # print(ret)
 
         # 只查询id和type
-        # print(es.search(index='test-index', filter_path=['hits.hits._id', 'hits.hits._type']))
+        # print(es.search(index='test-index', filter_path=['hits.hits._id', 'hits.hits._source']))
         # 通配符* 过滤
-        # print(es.search(index='test-index', filter_path=['hits.hits._*']))
+        # print(es.search(index='test-index', filter_path=['hits.hits._source']))
 
         # 获取集群信息
         # print(es.info())
@@ -44,7 +49,9 @@ class Command(BaseCommand):
         # print(es.tasks.list())
 
         #插入数据
-        # res = es.index(index="test-index", doc_type='tweet', id=1, body=doc)
+        # res = es.index(index="test-index", doc_type='tweet', id=1, body=data)
+        # res = es.index(index='one',doc_type='ones', id=2, body=data)
+        #
         # print(res, "###########################")
         # print(res['result'])
 
@@ -54,36 +61,42 @@ class Command(BaseCommand):
         #
         # es.indices.refresh(index="test-index")
         #
-        # res = es.search(index="test-index", body={"query": {"match_all": {}}})
+        # 循环取值
+        # https://blog.csdn.net/qq_41782425/article/details/90720889
+        print(es.search(index="one", body={"query": {"match_all": {}}})) # 查所有数据
+        # res = es.search(index="test-index", body={"query": {"match": {"name":"erww"}}}) # 查询name是er(包含)的数据
+        # res =es.search(index="test-index", body={"query": {"terms": {"text": ["er","100"]}}})
         # print(res,"@@@@@@@@@@@@@@@@@@@@@@")
         # print("Got %d Hits:" % res['hits']['total']['value'])
+        # mo ='user_info'
         # for hit in res['hits']['hits']:
-        #     print("%(timestamp)s %(author)s: %(text)s" % hit["_source"])
+        #     if hit['_id'].split('.')[1] == mo:
+        #         print(hit['_source'])
 
         # dict格式搜索
-        response = es.search(
-            index="my-index",
-            body={
-                "query": {
-                    "filtered": {
-                        "query": {
-                            "bool": {
-                                "must": [{"match": {"title": "python"}}],
-                                "must_not": [{"match": {"description": "beta"}}]
-                            }
-                        },
-                        "filter": {"term": {"category": "search"}}
-                    }
-                },
-                "aggs": {
-                    "per_tag": {
-                        "terms": {"field": "tags"},
-                        "aggs": {
-                            "max_lines": {"max": {"field": "lines"}}
-                        }
-                    }
-                }
-            }
-        )
-
-        print(response,"++++++++++++++++++")
+        # response = es.search(
+        #     index="my-index",
+        #     body={
+        #         "query": {
+        #             "filtered": {
+        #                 "query": {
+        #                     "bool": {
+        #                         "must": [{"match": {"title": "python"}}],
+        #                         "must_not": [{"match": {"description": "beta"}}]
+        #                     }
+        #                 },
+        #                 "filter": {"term": {"category": "search"}}
+        #             }
+        #         },
+        #         "aggs": {
+        #             "per_tag": {
+        #                 "terms": {"field": "tags"},
+        #                 "aggs": {
+        #                     "max_lines": {"max": {"field": "lines"}}
+        #                 }
+        #             }
+        #         }
+        #     }
+        # )
+        #
+        # print(response,"++++++++++++++++++")

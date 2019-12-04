@@ -162,10 +162,15 @@ CELERY_TIMEZONE = TIME_ZONE
 
 
 # elasticsearch配置
-# HAYSTACK_CONNECTIONS = {
-#     'default': {
-#         'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
-#         'URL': 'http://172.29.32.104:9200/',
-#         'INDEX_NAME': 'haystack',
-#     },
-# }
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
+        'URL': 'http://172.29.32.104:9200/',
+        'INDEX_NAME': 'test-index',
+    },
+}
+
+# 设置每页显示的数据量
+HAYSTACK_SEARCH_RESULTS_PER_PAGE = 10
+# 当数据库改变时，会自动更新索引
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
