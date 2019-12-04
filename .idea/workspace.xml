@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea4cf74d-e75e-4081-9b50-841dcb392d54" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/test_one/management/commands/elasticsearch_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_one/search_indexes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_one/management/commands/elasticsearch_dsl_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_obj/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_obj/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_one/management/commands/elasticsearch_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_one/management/commands/elasticsearch_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_one/search_indexes.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_one/search_indexes.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +47,7 @@
       </map>
     </option>
   </component>
+  <component name="ProjectId" id="1URzeDixnnsIzMdV4zIPBr1cvjK" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -130,10 +132,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574670703954</updated>
+      <workItem from="1575334290435" duration="17227000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

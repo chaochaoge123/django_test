@@ -162,10 +162,10 @@ CELERY_TIMEZONE = TIME_ZONE
 
 
 # elasticsearch配置
-HAYSTACK_CONNECTIONS = {
-    'default': {
-        'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
-        'URL': 'http://172.29.32.104:9200/',
-        'INDEX_NAME': 'haystack',
-    },
-}
+# HAYSTACK_CONNECTIONS = {
+#     'default': {
+#         'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
+#         'URL': 'http://172.29.32.104:9200/',
+#         'INDEX_NAME': 'haystack',
+#     },
+# }
