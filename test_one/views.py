@@ -63,7 +63,11 @@ def add(request):
     return JsonResponse(result)
 
 
-
+def data_up(request):
+    """ 新增数据验证es"""
+    res = User_info.objects.create(user_id=140, name="peter", password="239876", remarks="庐州月", mobile="46842321")
+    print(res)
+    return HttpResponse("ok")
 
 
 

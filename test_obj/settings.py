@@ -168,6 +168,11 @@ HAYSTACK_CONNECTIONS = {
         'URL': 'http://172.29.32.104:9200/',
         'INDEX_NAME': 'test-index',
     },
+    'ones': {
+        'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
+        'URL': 'http://172.29.32.104:9200/',
+        'INDEX_NAME': 'one',
+    }
 }
 
 # 设置每页显示的数据量

@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ea4cf74d-e75e-4081-9b50-841dcb392d54" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_obj/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_obj/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_obj/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_obj/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_one/management/commands/elasticsearch_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_one/management/commands/elasticsearch_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_one/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_one/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -138,7 +141,8 @@
       <option name="presentableId" value="Default" />
       <updated>1574670703954</updated>
       <workItem from="1575334290435" duration="29654000" />
-      <workItem from="1575436962822" duration="13549000" />
+      <workItem from="1575436962822" duration="15896000" />
+      <workItem from="1575507465138" duration="7280000" />
     </task>
     <servers />
   </component>

@@ -29,7 +29,7 @@ class Command(BaseCommand):
                 'remark': '明月'}
 
         # 创建索引
-        # ret = es.indices.create(index="one")
+        # ret = es.indices.create(index="two")
         # print(es.delete(index="one"),"KKKKKKKKKKKKK")
         # print(ret)
 
@@ -59,13 +59,14 @@ class Command(BaseCommand):
         # print(res,"%%%%%%%%%%%%%%%%%%%%%%%200")
         # print(res['_source'])
         #
-        # es.indices.refresh(index="test-index")
+        # print(es.indices.refresh(index="one"),"MMMMMMMMMMMM")
         #
         # 循环取值
         # https://blog.csdn.net/qq_41782425/article/details/90720889
-        print(es.search(index="one", body={"query": {"match_all": {}}})) # 查所有数据
+        print(es.search(index="test-index", body={"query": {"match_all": {}}})) # 查所有数据
         # res = es.search(index="test-index", body={"query": {"match": {"name":"erww"}}}) # 查询name是er(包含)的数据
         # res =es.search(index="test-index", body={"query": {"terms": {"text": ["er","100"]}}})
+
         # print(res,"@@@@@@@@@@@@@@@@@@@@@@")
         # print("Got %d Hits:" % res['hits']['total']['value'])
         # mo ='user_info'
@@ -73,30 +74,6 @@ class Command(BaseCommand):
         #     if hit['_id'].split('.')[1] == mo:
         #         print(hit['_source'])
 
-        # dict格式搜索
-        # response = es.search(
-        #     index="my-index",
-        #     body={
-        #         "query": {
-        #             "filtered": {
-        #                 "query": {
-        #                     "bool": {
-        #                         "must": [{"match": {"title": "python"}}],
-        #                         "must_not": [{"match": {"description": "beta"}}]
-        #                     }
-        #                 },
-        #                 "filter": {"term": {"category": "search"}}
-        #             }
-        #         },
-        #         "aggs": {
-        #             "per_tag": {
-        #                 "terms": {"field": "tags"},
-        #                 "aggs": {
-        #                     "max_lines": {"max": {"field": "lines"}}
-        #                 }
-        #             }
-        #         }
-        #     }
-        # )
-        #
+        # mapping
+
         # print(response,"++++++++++++++++++")
