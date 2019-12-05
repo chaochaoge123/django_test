@@ -23,7 +23,7 @@ cel = Celery('celery_demo',
              backend='redis://:qqcqqc@172.29.32.104:6379/6',
              # 包含以下两个任务文件，去相应的py文件中找任务，对多个任务做分类
              include=['tasks.tasks1',
-                      # 'celery_task.tasks2'
+                      'tasks.tasks2'
                       ])
 
 # 时区

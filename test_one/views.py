@@ -52,11 +52,12 @@ def tset_user_cz(request):
     return JsonResponse(data=info, safe=False)
 
 
-from tasks import tasks1
+from tasks import tasks1,tasks2
 
 
 def celery_t(request):
     tasks1.add.delay(3, 4)
+    tasks2.add.delay(2, 2)
     return HttpResponse("ok")
 
 
