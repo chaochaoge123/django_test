@@ -155,3 +155,11 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+
+# 阿里云配置 oss 子用户
+ALIYUN_ACCESS_KEY_ID = "LTAI4FuUWXQkhWohiFTwvNTd"
+ALIYUN_ACCESS_KEY_SECRET = "vWadI1GqxOW4v4GwKhhejqbsyynzPu"
+OSS_BUCKETS = "qqc-data"
+OSS_ENDPOINT = "http://oss-cn-shanghai.aliyuncs.com"
+STS_ROLE = "acs:ram::1511164971246235:role/testone"
