@@ -12,7 +12,7 @@ class Command(BaseCommand):
 
     @staticmethod
     def add_xf_user():
-        r = redis.Redis(host='172.29.32.104', port=6379, password="qqcqqc")
+        r = redis.Redis(host='47.102.138.171:6379', port=6379, password="qqcqqc")
         r.set('age',99)
         print(r.get("age"),"KKKKKKKKKKKKKK")
 
