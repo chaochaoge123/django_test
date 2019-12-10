@@ -16,7 +16,7 @@
 # CELERYD_TASK_TIME_LIMIT=12*30
 
 from __future__ import absolute_import
-from celery import Celery
+from celery import Celery, platforms
 
 cel = Celery('celery_demo',
              broker='redis://:qqcqqc@47.102.138.171:6379/5',
@@ -30,3 +30,5 @@ cel = Celery('celery_demo',
 cel.conf.timezone = 'Asia/Shanghai'
 # 是否使用UTC
 cel.conf.enable_utc = False
+
+platforms.C_FORCE_ROOT = True
