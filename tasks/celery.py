@@ -19,8 +19,8 @@ from __future__ import absolute_import
 from celery import Celery
 
 cel = Celery('celery_demo',
-             broker='redis://:qqcqqc@172.29.32.104:6379/5',
-             backend='redis://:qqcqqc@172.29.32.104:6379/6',
+             broker='redis://:qqcqqc@47.102.138.171:6379/5',
+             backend='redis://:qqcqqc@47.102.138.171:6379/6',
              # 包含以下两个任务文件，去相应的py文件中找任务，对多个任务做分类
              include=['tasks.tasks1',
                       'tasks.tasks2'
