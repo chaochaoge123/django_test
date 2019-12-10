@@ -6,7 +6,7 @@ from django.http import JsonResponse
 from test_one.tools import create_user_cache,get_user_cache
 from django_redis import get_redis_connection
 from test_one.models.user import User_info
-
+from .import tasks
 
 # 信号
 work_done = django.dispatch.Signal(providing_args=['path', 'time'])
@@ -52,13 +52,12 @@ def tset_user_cz(request):
     return JsonResponse(data=info, safe=False)
 
 
-from tasks import tasks1,tasks2
-
-
 def celery_t(request):
-    tasks1.add.delay(3, 4)
-    tasks2.add.delay(2, 2)
-    return HttpResponse("ok")
+    tasks.add.delay(1, 2)
+    tasks.add_two.delay(5, 5)
+    result = {'code': 0, 'msg': 'hello'}
+    return JsonResponse(result)
+
 
 
 

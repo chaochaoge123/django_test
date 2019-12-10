@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea4cf74d-e75e-4081-9b50-841dcb392d54" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/test_one/tasks.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/tasks1.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/tasks1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/tasks2.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/tasks2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_obj/celery.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/celery.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/tasks1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/tasks2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_obj/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_obj/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_one/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_one/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

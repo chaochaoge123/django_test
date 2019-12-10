@@ -163,3 +163,20 @@ ALIYUN_ACCESS_KEY_SECRET = "vWadI1GqxOW4v4GwKhhejqbsyynzPu"
 OSS_BUCKETS = "qqc-data"
 OSS_ENDPOINT = "http://oss-cn-shanghai.aliyuncs.com"
 STS_ROLE = "acs:ram::1511164971246235:role/testone"
+
+
+from celery import platforms
+# celery
+BROKER_URL = 'redis://:qqcqqc@47.102.138.171:6379/3'
+# celery结果返回，可用于跟踪结果
+CELERY_RESULT_BACKEND = 'redis://:qqcqqc@47.102.138.171:6379/4'
+
+# celery内容等消息的格式设置
+CELERY_ACCEPT_CONTENT = ['application/json', ]
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+
+# celery时区设置，使用settings中TIME_ZONE同样的时区
+CELERY_TIMEZONE = TIME_ZONE
+
+platforms.C_FORCE_ROOT = True
