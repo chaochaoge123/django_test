@@ -11,10 +11,8 @@ chardet==3.0.4
 crcmod==1.7
 Django==2.1
 django-celery==3.3.1
-django-haystack==2.8.1
 django-redis==4.10.0
 djangorestframework==3.10.3
-drf-haystack==1.8.6
 elasticsearch==5.5.2
 elasticsearch-dsl==5.4.0
 idna==2.8
