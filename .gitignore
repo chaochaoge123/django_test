@@ -106,3 +106,20 @@ venv.bak/
 .idea
 
 *.pyc
+*.xml
+
+.DS_Store
+.project
+
+core/config/develop.py
+
+tags
+*.tags*
+dump.rdb
+
+*.idea*
+*.vscode*
+
+yilou_venv/
+
+celerybeat*
