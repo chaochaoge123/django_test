@@ -33,7 +33,8 @@ def tem_test(request):
 def resdis_test(request):
     conn = get_redis_connection('default')
     all=conn.get("age")
-    data={"age":all}
+    print(all,"CCCCCCCCCCC")
+    data={"age":all.decode()}
     print(type(data))
     return JsonResponse(data=data, safe=False)
 

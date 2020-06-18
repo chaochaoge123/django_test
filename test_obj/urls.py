@@ -21,9 +21,9 @@ from django.conf.urls import url
 
 urlpatterns = [
     url('admin/', admin.site.urls),
-    url('create/signals/', views.create_signal),
-    url('tem/test/', views.tem_test),
-    url('redis/test/', views.resdis_test),
-    url('tset/user/cz/', views.tset_user_cz),
-    url('celery/test/',views.celery_t)
+    url('create/signals', views.create_signal),
+    url('tem/test', views.tem_test),
+    url('redis/test', views.resdis_test),
+    url('tset/user/cz', views.tset_user_cz),
+    url('celery/test',views.celery_t)
 ]

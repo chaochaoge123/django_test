@@ -1,27 +1,14 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
+.DS_Store
+.project
 
-# celery beat schedule file
-celerybeat-schedule
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
-# mypy
-.mypy_cache/
-
-.idea
 
 *.pyc
-*.xml
+core/config/develop.py
+
+tags
+*.tags*
+dump.rdb
 
 *.idea*
 *.vscode*
-
-yilou_venv/
-
-celerybeat*
+venv/
