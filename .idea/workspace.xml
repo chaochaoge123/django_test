@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea4cf74d-e75e-4081-9b50-841dcb392d54" name="Default" comment="" />
+    <list default="true" id="ea4cf74d-e75e-4081-9b50-841dcb392d54" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/uwsgi_conf/uwsgi.ini" beforeDir="false" afterPath="$PROJECT_DIR$/uwsgi_conf/uwsgi.ini" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,16 +33,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_obj/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-187">
-              <caret line="144" selection-start-line="144" selection-end-line="144" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_obj/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
@@ -49,30 +42,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="uwsgi.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_one/uwsgi_conf/uwsgi.log">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="uwsgi.pid" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_one/uwsgi_conf/uwsgi.pid">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="uwsgi.ini" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test_one/uwsgi_conf/uwsgi.ini">
+      <file leaf-file-name="wsgi.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_obj/wsgi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state relative-caret-position="221">
+              <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manage.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/manage.py">
+      <file leaf-file-name="uwsgi.ini" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/uwsgi_conf/uwsgi.ini">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+            <state relative-caret-position="357">
+              <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -145,6 +128,7 @@
         <option value="$PROJECT_DIR$/test_obj/urls.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/test_one/uwsgi_conf/uwsgi.ini" />
+        <option value="$PROJECT_DIR$/uwsgi_conf/uwsgi.ini" />
       </list>
     </option>
   </component>
@@ -158,8 +142,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="194" />
-    <option name="y" value="283" />
+    <option name="x" value="-181" />
+    <option name="y" value="1007" />
     <option name="width" value="1680" />
     <option name="height" value="1032" />
   </component>
@@ -182,7 +166,7 @@
             <path>
               <item name="test_obj" type="b2602c69:ProjectViewProjectNode" />
               <item name="test_obj" type="462c0819:PsiDirectoryNode" />
-              <item name="test_one" type="462c0819:PsiDirectoryNode" />
+              <item name="test_obj" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -210,16 +194,17 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\news\test_obj" />
+      <recent name="E:\news\test_obj\pro_cel" />
+      <recent name="E:\test_objects\test_obj\test_one" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\news\test_obj\tasks" />
       <recent name="E:\news\test_obj" />
       <recent name="E:\news\test_obj\test_one" />
       <recent name="E:\news\test_obj\test_one\tasks" />
       <recent name="E:\news\test_obj\pro_cel" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\news\test_obj\pro_cel" />
-      <recent name="E:\test_objects\test_obj\test_one" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -311,7 +296,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="3" y="781" width="1680" height="1032" extended-state="0" />
+    <frame x="121" y="154" width="1680" height="1032" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.17431761" side_tool="true" weight="0.32900944" />
@@ -319,7 +305,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32900944" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8256824" weight="0.36061683" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.8858561" visible="true" weight="0.4460261" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.8858561" visible="true" weight="0.35231316" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18362282" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" visible="true" weight="0.013647643" />
@@ -379,16 +365,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://D:/work/untitled1/venv/Lib/site-packages/django/core/cache/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_one/models/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://D:/work/untitled1/venv/Lib/site-packages/django_redis/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="86">
@@ -516,13 +492,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_obj/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_one/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -607,13 +576,6 @@
     <entry file="file://$PROJECT_DIR$/test_one/uwsgi_conf.conf">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_obj/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_one/uwsgi_conf/uwsgi.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -622,8 +584,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_one/uwsgi_conf/uwsgi.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state relative-caret-position="272">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uwsgi_conf/uwsgi.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/core/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_obj/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_obj/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
         </state>
       </provider>
     </entry>
