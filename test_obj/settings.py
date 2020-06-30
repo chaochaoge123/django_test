@@ -95,7 +95,7 @@ DATABASES = {
         'HOST': '47.102.138.171',
         'PORT': 3306,
         'USER': 'root',
-        "PASSWORD": 'qqcqqc',
+        "PASSWORD": 'qqc--qqc',
         'NAME': 'test'
     }
 
@@ -109,7 +109,7 @@ CACHES = {
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
             "CONNECTION_POOL_KWARGS": {"max_connections": 100},
-            "PASSWORD": "qqcqqc",
+            "PASSWORD": "qqc--qqc",
         }
     }
 }
@@ -170,7 +170,7 @@ from celery.schedules import crontab
 # celery
 BROKER_URL = 'redis://:qqcqqc@47.102.138.171:6379/3'
 # celery结果返回，可用于跟踪结果
-CELERY_RESULT_BACKEND = 'redis://:qqcqqc@47.102.138.171:6379/4'
+CELERY_RESULT_BACKEND = 'redis://:qqc--qqc@47.102.138.171:6379/4'
 
 # celery内容等消息的格式设置
 CELERY_ACCEPT_CONTENT = ['application/json', ]
