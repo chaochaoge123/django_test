@@ -166,6 +166,7 @@ STS_ROLE = "acs:ram::1511164971246235:role/testone"
 
 
 from celery import platforms
+from celery.schedules import crontab
 # celery
 BROKER_URL = 'redis://:qqcqqc@47.102.138.171:6379/3'
 # celery结果返回，可用于跟踪结果
@@ -180,3 +181,14 @@ CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TIMEZONE = TIME_ZONE
 
 platforms.C_FORCE_ROOT = True
+
+
+# 定时任务
+CELERYBEAT_SCHEDULE = {
+    'schedule-test': {
+        'task': 'test_one.tasks.add_two',
+        'schedule': 20,
+        'args': (4, 5)
+    },
+
+}

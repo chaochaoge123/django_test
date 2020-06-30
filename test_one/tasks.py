@@ -1,7 +1,8 @@
 import time
 from celery import shared_task
+from test_obj.celery import *
 
-@shared_task
+@app.task
 def add(a,b):
     print("这是任务开始")
     print(a+b)
@@ -9,8 +10,8 @@ def add(a,b):
     print("这是任务结束")
 
 
-@shared_task
+@app.task
 def add_two(a,b):
-    print("第二个任务")
+    print("第二个任务",a*b)
     time.sleep(5)
     print("结束")
