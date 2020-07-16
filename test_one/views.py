@@ -26,7 +26,7 @@ def my_callback(sender, **kwargs):
 
 
 def tem_test(request):
-    return render(request, "one.html")
+    return render(request, "search.html")
 
 
 # redis连接
@@ -60,7 +60,8 @@ def celery_t(request):
     return JsonResponse(result)
 
 
-
+def search_tool(request):
+    return render(request, "search.html")
 
 
 
