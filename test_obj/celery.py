@@ -23,5 +23,10 @@ app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
 
 
 """ 
-命令启动 同manage.py文件目录下： celery -A test_obj worker --pool=solo -l info
+命令启动 同manage.py文件目录下： 
+执行任务：celery -A test_obj worker --pool=solo -l info
+发布任务：elery -A test_obj beat
+发布和执行一起：  celery -B -A test_obj  worker  
+
+
 """
