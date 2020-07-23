@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea4cf74d-e75e-4081-9b50-841dcb392d54" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_obj/celery.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_obj/celery.py" afterDir="false" />
-    </list>
+    <list default="true" id="ea4cf74d-e75e-4081-9b50-841dcb392d54" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -165,11 +162,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-335" />
-    <option name="y" value="852" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="137" />
+    <option name="y" value="52" />
     <option name="width" value="1680" />
-    <option name="height" value="989" />
+    <option name="height" value="990" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -330,7 +327,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-268" y="682" width="1344" height="791" extended-state="0" />
+    <frame x="-45" y="80" width="1344" height="791" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.17431761" side_tool="true" weight="0.32900944" />
