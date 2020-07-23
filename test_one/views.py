@@ -55,7 +55,7 @@ def tset_user_cz(request):
 
 def celery_t(request):
     tasks.add.delay(1, 2)
-    tasks.add_two.delay(5, 5)
+    tasks.add_three.delay(50, 55)
     result = {'code': 0, 'msg': 'hello'}
     return JsonResponse(result)
 

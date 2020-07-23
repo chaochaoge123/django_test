@@ -29,4 +29,8 @@ app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
 发布和执行一起：  celery -B -A test_obj  worker  
 
 
+supervisorctl 命令
+supervisorctl restart test-django:*  重启
+supervisorctl stop test-django:*  停止
+supervisorctl start test-django:*  开启
 """

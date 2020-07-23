@@ -187,7 +187,7 @@ platforms.C_FORCE_ROOT = True
 CELERYBEAT_SCHEDULE = {
     'schedule-test': {
         'task': 'test_one.tasks.add_two',
-        'schedule': 20,
+        'schedule': 200,
         'args': (4, 5)
     },
 
