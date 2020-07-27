@@ -158,11 +158,11 @@ STATICFILES_DIRS = [
 
 
 # 阿里云配置 oss 子用户
-ALIYUN_ACCESS_KEY_ID = "LTAI4GBcrapVModkeNaoRWYj"
-ALIYUN_ACCESS_KEY_SECRET = "cJIRJDVQSU2GFlAYGd2oP43hgJ61AG"
-OSS_BUCKETS = "qqc-one"
-OSS_ENDPOINT = "http://oss-cn-shanghai.aliyuncs.com"
-STS_ROLE = "acs:ram::1511164971246235:role/two"
+# ALIYUN_ACCESS_KEY_ID = "LTAI4GBcrapVModkeNaoRWYj"
+# ALIYUN_ACCESS_KEY_SECRET = "cJIRJDVQSU2GFlAYGd2oP43hgJ61AG"
+# OSS_BUCKETS = "qqc-one"
+# OSS_ENDPOINT = "http://oss-cn-shanghai.aliyuncs.com"
+# STS_ROLE = "acs:ram::1511164971246235:role/two"
 
 
 from celery import platforms
