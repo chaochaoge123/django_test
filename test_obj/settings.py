@@ -45,7 +45,7 @@ INSTALLED_APPS = [
 ]
 
 # celery worker backend 配置
-# from tasks import celery
+# from tasksss import celery
 #
 # BROKER_BACKEND='redis'
 # BOOKER_URL='redis://:qqcqqc@172.29.32.104:6379/5'
@@ -192,9 +192,24 @@ platforms.C_FORCE_ROOT = True
 # 定时任务
 CELERYBEAT_SCHEDULE = {
     'schedule-test': {
-        'task': 'test_one.tasks.add_two',
-        'schedule': 200,
+        'task': 'test_one.tasksss.add_two',
+        'schedule': 20,
         'args': (4, 5)
     },
 
+}
+
+# celery 队列
+from kombu import Exchange, Queue
+CELERY_QUEUES = [
+    Queue('default', Exchange('default'), routing_key='default'),
+    Queue('dj_one', Exchange('dj_one'), routing_key='dj_one'),
+    Queue('dj_two', Exchange('dj_two'), routing_key='dj_two'),
+]
+
+
+CELERY_ROUTES = {
+    'test_one.tasks.add': {'queue': 'default', 'routing_key': 'default'},
+    'test_one.tasks.add_three': {'queue': 'dj_one', 'routing_key': 'dj_one'},
+    'test_one.tasks.add_four': {'queue': 'dj_two', 'routing_key': 'dj_two'}
 }

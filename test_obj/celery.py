@@ -13,7 +13,7 @@ project_settings = '%s.settings' % project_name
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', project_settings)
 
 # 实例化Celery
-app = Celery('tasks', broker='redis://:qqcqqc@47.102.138.171:6379/3')
+app = Celery('tasksss', broker='redis://:qqcqqc@47.102.138.171:6379/3')
 
 # 使用django的settings文件配置celery
 app.config_from_object('django.conf:settings')
@@ -27,6 +27,7 @@ app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
 执行任务：celery -A test_obj worker --pool=solo -l info
 发布任务：elery -A test_obj beat
 发布和执行一起：  celery -B -A test_obj  worker  
+指定队列启动：celery -A test_obj worker -n dj_two -Q dj_two --pool=solo -l info
 
 
 supervisorctl 命令
