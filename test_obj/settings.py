@@ -192,8 +192,8 @@ platforms.C_FORCE_ROOT = True
 # 定时任务
 CELERYBEAT_SCHEDULE = {
     'schedule-test': {
-        'task': 'test_one.tasksss.add_two',
-        'schedule': 20,
+        'task': 'test_one.tasks.add_two',
+        'schedule': 200,
         'args': (4, 5)
     },
 
@@ -209,7 +209,8 @@ CELERY_QUEUES = [
 
 
 CELERY_ROUTES = {
-    'test_one.tasks.add': {'queue': 'default', 'routing_key': 'default'},
+    'test_one.tasks.add_two': {'queue': 'default', 'routing_key': 'default'},
     'test_one.tasks.add_three': {'queue': 'dj_one', 'routing_key': 'dj_one'},
+    'test_one.tasks.add_six': {'queue': 'dj_one', 'routing_key': 'dj_one'},
     'test_one.tasks.add_four': {'queue': 'dj_two', 'routing_key': 'dj_two'}
 }
