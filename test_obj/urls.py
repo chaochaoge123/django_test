@@ -27,4 +27,5 @@ urlpatterns = [
     url('tset/user/cz', views.tset_user_cz),
     url('celery/test',views.celery_t),
     url('search/', views.search_tool),
+    url('sentry/test', views.sentry_test),
 ]

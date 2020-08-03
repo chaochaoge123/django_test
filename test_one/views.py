@@ -65,7 +65,9 @@ def search_tool(request):
 
 
 
-
+def sentry_test(request):
+    age = int(request.GET.get('age'))
+    return JsonResponse({'age': age})
 
 
 

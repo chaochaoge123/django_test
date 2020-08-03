@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import raven
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'test_one.apps.TestOneConfig',
+    'raven.contrib.django.raven_compat',
     # 'djcelery',
 ]
 
@@ -156,6 +158,10 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
+# sentry 配置
+RAVEN_CONFIG = {
+    'dsn': 'https://e850247051e04a9aa83ce943e2476b83@o428107.ingest.sentry.io/5373101',
+}
 
 # 阿里云配置 oss 子用户
 # ALIYUN_ACCESS_KEY_ID = "LTAI4GBcrapVModkeNaoRWYj"
