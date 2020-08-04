@@ -4,6 +4,7 @@
 
 *.pyc
 core/config/develop.py
+__pycache__
 
 tags
 *.tags*
