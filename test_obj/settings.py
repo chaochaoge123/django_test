@@ -96,8 +96,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'HOST': '47.102.138.171',
         'PORT': 3306,
-        'USER': 'root',
-        "PASSWORD": 'qqcqqc',
+        'USER': 'qqc',
+        "PASSWORD": '123456',
         'NAME': 'test'
     }
 
@@ -164,8 +164,8 @@ RAVEN_CONFIG = {
 }
 
 # 阿里云配置 oss 子用户
-# ALIYUN_ACCESS_KEY_ID = "LTAI4GBcrapVModkeNaoRWYj"
-# ALIYUN_ACCESS_KEY_SECRET = "cJIRJDVQSU2GFlAYGd2oP43hgJ61AG"
+# ALIYUN_ACCESS_KEY_ID = "LTAI4GBcrapVModkeNaoRW"
+# ALIYUN_ACCESS_KEY_SECRET = "cJIRJDVQSU2GFlAYGd2oP43hgJ61"
 # OSS_BUCKETS = "qqc-one"
 # OSS_ENDPOINT = "http://oss-cn-shanghai.aliyuncs.com"
 # STS_ROLE = "acs:ram::1511164971246235:role/two"
