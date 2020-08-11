@@ -79,6 +79,15 @@ def queue_test(request):
     return JsonResponse(result)
 
 
+def t_gevent(request):
+    user=User_info.objects.filter(id=1).first()
+    u=user.user_id
+    if u==1:
+        user.user_id=u-1
+        user.save()
+        return JsonResponse({'user_id':user.user_id,'messsge':"减数成功"})
+    return JsonResponse({'user_id':user.user_id,'messsge':"减数失败"})
+
 
 
 

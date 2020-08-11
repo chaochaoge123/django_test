@@ -28,5 +28,6 @@ urlpatterns = [
     url('celery/test',views.celery_t),
     url('search/', views.search_tool),
     url('sentry/test', views.sentry_test),
-    url('queue/test', views.queue_test)
+    url('queue/test', views.queue_test),
+    url('t_gevent', views.t_gevent)
 ]
