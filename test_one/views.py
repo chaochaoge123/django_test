@@ -81,13 +81,13 @@ def queue_test(request):
 
 def t_gevent(request):
     time.sleep(3)
-    user=User_info.objects.filter(id=1).first()
-    u=user.user_id
-    if u==1:
-        user.user_id=u-1
-        user.save()
-        return JsonResponse({'user_id':user.user_id,'messsge':"减数成功"})
-    return JsonResponse({'user_id':user.user_id,'messsge':"减数失败"})
+    # user=User_info.objects.filter(id=1).first()
+    # u=user.user_id
+    # if u==1:
+    #     user.user_id=u-1
+    #     user.save()
+    #     return JsonResponse({'user_id':user.user_id,'messsge':"减数成功"})
+    return JsonResponse({'user_id':0,'messsge':"减数失败"})
 
 
 
