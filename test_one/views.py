@@ -80,6 +80,7 @@ def queue_test(request):
 
 
 def t_gevent(request):
+    time.sleep(3)
     user=User_info.objects.filter(id=1).first()
     u=user.user_id
     if u==1:
