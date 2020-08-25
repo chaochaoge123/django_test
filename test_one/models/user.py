@@ -27,7 +27,7 @@ class Item(models.Model):
     item_no = models.CharField(default=u'', blank=False, max_length=32, verbose_name=u'商品编号')
 
 
-class IpInfo(models):
+class IpInfo(models.Model):
     id = models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name=u'ID')
     user_ip = models.CharField(default=u'', blank=False, max_length=32, verbose_name=u'IP地址')
     count = models.IntegerField(default=0, verbose_name=u'当天访问次数')
