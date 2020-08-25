@@ -25,3 +25,17 @@ class User_info(models.Model):
 class Item(models.Model):
     case_no = models.CharField(default=u'', blank=False, max_length=32, verbose_name=u'方案编号')
     item_no = models.CharField(default=u'', blank=False, max_length=32, verbose_name=u'商品编号')
+
+
+class IpInfo(models):
+    id = models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name=u'ID')
+    user_ip = models.CharField(default=u'', blank=False, max_length=32, verbose_name=u'IP地址')
+    count = models.IntegerField(default=0, verbose_name=u'当天访问次数')
+    create_time = models.DateTimeField(auto_now_add=True, verbose_name=u'创建时间')
+    modify_time = models.DateTimeField(auto_now=True, verbose_name=u'更新时间')
+
+    class Meta:
+        app_label = 'test_one'
+        db_table = 'ip_info'
+        verbose_name = u'访问信息'
+        verbose_name_plural = u'访问信息'

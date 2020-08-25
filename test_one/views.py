@@ -7,6 +7,7 @@ from test_one.tools import create_user_cache,get_user_cache
 from django_redis import get_redis_connection
 from test_one.models.user import User_info
 from .import tasks
+from test_one.tools.ip_tool import *
 
 # 信号
 work_done = django.dispatch.Signal(providing_args=['path', 'time'])
@@ -53,6 +54,7 @@ def tset_user_cz(request):
     return JsonResponse(data=info, safe=False)
 
 
+@user_ip_required
 def celery_t(request):
     tasks.add.delay(1, 2)
     tasks.add_three.delay(50, 55)
@@ -79,6 +81,7 @@ def queue_test(request):
     return JsonResponse(result)
 
 
+@user_ip_required
 def t_gevent(request):
     time.sleep(3)
     # user=User_info.objects.filter(id=1).first()
