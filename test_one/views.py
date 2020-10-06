@@ -69,7 +69,8 @@ def search_tool(request):
 
 def sentry_test(request):
     age = int(request.GET.get('age'))
-    print("最新版本测试，@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+    print("最新版本测试，v0.2版本UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU:wq"
+          "")
     return JsonResponse({'age': age})
 
 
