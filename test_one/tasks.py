@@ -44,3 +44,6 @@ def add_six(a, b):
     time.sleep(2)
     print(a+b)
     print('t_six---任务结束')
+
+
+# 最新版本测试
