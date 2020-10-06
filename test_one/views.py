@@ -78,6 +78,7 @@ def queue_test(request):
 
     tasks.add_six.delay(333, 444)
     result = {'code': 0, 'msg': 'add_four'}
+    print("远程代码覆盖待本地的内容########################")
     return JsonResponse(result)
 
 
