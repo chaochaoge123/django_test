@@ -33,3 +33,7 @@ def user_ip_required(view_func):
         return view_func(request, *args, **kwargs)
 
     return wraps(view_func, assigned=available_attrs(view_func))(wrapped_view)
+
+
+def user_login_required():
+    pass
