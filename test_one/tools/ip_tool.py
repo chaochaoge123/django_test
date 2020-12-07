@@ -40,5 +40,4 @@ def user_login_required():
 
 
 def test():
-    """ 测试函数 """
     pass
