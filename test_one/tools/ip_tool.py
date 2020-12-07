@@ -37,3 +37,8 @@ def user_ip_required(view_func):
 
 def user_login_required():
     pass
+
+
+def test():
+    """ 测试函数 """
+    pass
