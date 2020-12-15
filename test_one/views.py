@@ -5,9 +5,12 @@ from django.dispatch import receiver
 from django.http import JsonResponse
 from test_one.tools import create_user_cache,get_user_cache
 from django_redis import get_redis_connection
-from test_one.models.user import User_info
+from test_one.models.user import User_info,UserToken
 from .import tasks
-from test_one.tools.ip_tool import *
+from test_one.tools.user_tool import *
+from test_one.tools.common import *
+from test_one.tools import redis_pool
+import json
 
 # 信号
 work_done = django.dispatch.Signal(providing_args=['path', 'time'])
@@ -85,7 +88,9 @@ def queue_test(request):
 
 
 @user_ip_required
+@user_login_required
 def t_gevent(request):
+    print(request.user_id,request.token,"DDDDDDDDDDDD")
     time.sleep(3)
     # user=User_info.objects.filter(id=1).first()
     # u=user.user_id
@@ -97,10 +102,39 @@ def t_gevent(request):
 
 
 
+def user_zc(request):
+    name=request.GET.get("name")
+    mobile = request.GET.get("mobile")
+    password = request.GET.get("password")
+    re_password = request.GET.get("re_password")
+    if User_info.user_is_exist(name):
+        return JsonResponse({'error_message': "用户名已存在", "status_code": 702})
+    if password != re_password:
+        return JsonResponse({'error_message': "密码不一致", "status_code": 703})
+    User_info.create_user(name, mobile,password)
+    return JsonResponse({'message': "创建成功", "status_code": 10000})
 
 
+def user_dl(request):
+    name = request.GET.get("name")
+    password = request.GET.get("password")
+    if not User_info.user_is_exist(name):
+        return JsonResponse({'error_message': "用户名不存在", "status_code": 704})
+    u_info = User_info.objects.filter(name=name, state=0).first()
+    if u_info.password != hashlib_tool(password):
+        return JsonResponse({'error_message': "密码错误", "status_code": 705})
 
+    data = UserToken.create_or_update_token(u_info.id, create_token(),
+                                       overdue_time=datetime.datetime.now() + datetime.timedelta(days=1))
+    user_data = {
+        'id': u_info.id,
+        'name': u_info.name,
+        'mobile': u_info.mobile,
+        'token': data.token,
+        'overdue_time': data.overdue_time.strftime('%Y-%m-%d %H:%M:%S'),
+        'password': u_info.password
+    }
 
-
-
-
+    redis_pool.delete('user_id_%s' % (u_info.id))
+    redis_pool.set('user_id_%s' % (u_info.id), json.dumps(user_data, ensure_ascii=False))
+    return JsonResponse(user_data)

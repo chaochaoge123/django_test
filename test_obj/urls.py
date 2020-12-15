@@ -29,5 +29,7 @@ urlpatterns = [
     url('search/', views.search_tool),
     url('sentry/test', views.sentry_test),
     url('queue/test', views.queue_test),
-    url('t_gevent', views.t_gevent)
+    url('t_gevent', views.t_gevent),
+    url('user_zhuc', views.user_zc),
+    url('user_denglu',views.user_dl)
 ]
