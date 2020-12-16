@@ -26,7 +26,7 @@ class User_info(models.Model):
 
     @classmethod
     def create_user(cls, name, mobile, password):
-        cls.objects.create(name=name, mobile=mobile, password=hashlib_tool(password))
+        cls.objects.create(name=name, mobile=mobile, password=make_password(password))
 
     class Meta:
         app_label = 'test_one'

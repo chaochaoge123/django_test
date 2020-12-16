@@ -10,7 +10,7 @@ from functools import wraps
 from test_one.models.user import User_info, IpInfo,UserToken
 import datetime
 from django.http import JsonResponse
-from test_one.tools.redis_pool import *
+from test_one.tools.cache_tool import *
 import json
 
 
@@ -44,7 +44,7 @@ def user_login_required(view_func):
         token = request.META.get("HTTP_USER_TOKEN")
         if not user_id or not token:
             return JsonResponse({'message': "公共参数不全", "status_code": 701})
-        cache_data = get('user_id_%s' % (user_id))
+        cache_data = get_user_cache('user_id_%s' % (user_id))
         if not cache_data:
             t_da = UserToken.objects.filter(user_id=user_id, state=0).first()
             if not t_da:
@@ -55,7 +55,7 @@ def user_login_required(view_func):
                 return JsonResponse({'message': "token错误", "status_code": 708})
         user_data = json.loads(cache_data)
         if token != user_data.get('token'):
-            return JsonResponse({'message': "token错误", "status_code": 708})
+            return JsonResponse({'message': "缓存token错误", "status_code": 708})
         request.user_id, request.token = user_data.get('id'), user_data.get('token')
 
         return view_func(request, *args, **kwargs)

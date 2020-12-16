@@ -3,7 +3,7 @@ from .data_settings import *
 
 
 def conn_redis():
-    pool = redis.ConnectionPool(host='47.102.138.171', port=6379, password='qqcqqc')
+    pool = redis.ConnectionPool(host='127.0.0.1', port=6379, password='qqcqqc')
     r_client = redis.Redis(connection_pool=pool)
     return r_client
 
@@ -13,8 +13,8 @@ def get(key):
     return data.decode() if data else ''
 
 
-def set(key, value):
-    conn_redis().set(key, value, ex=USER_TIME_OUT)
+def set(key, value, time_out):
+    conn_redis().set(key, value, ex=time_out)
 
 
 def delete(key):

@@ -11,7 +11,7 @@ import hashlib
 import time
 from test_one.tools import *
 
-def hashlib_tool(data):
+def make_password(data):
     hl = hashlib.md5()
     hl.update(data.encode(encoding='utf-8'))
     hl.update('加点料'.encode(encoding='utf-8'))
@@ -23,7 +23,3 @@ def create_token():
     hl.update(str(time.time()).encode(encoding='utf-8'))
     hl.update('加点料'.encode(encoding='utf-8'))
     return hl.hexdigest()
-
-
-def verification_token(user_id,token):
-    get('user_id_%s' % (user_id))

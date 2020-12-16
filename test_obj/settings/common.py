@@ -1,3 +1,11 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# @Time    : 2020/12/16 10:52
+# @Author  : qqc
+# @File    : common.py
+# @Software: PyCharm
+
+
 # encoding: utf-8
 """
 Django settings for test_obj project.
@@ -103,18 +111,7 @@ DATABASES = {
 
 }
 
-# redis配置
-CACHES = {
-    "default": {
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://47.102.138.171:6379/0",
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient",
-            "CONNECTION_POOL_KWARGS": {"max_connections": 100},
-            "PASSWORD": "qqcqqc",
-        }
-    }
-}
+
 
 
 # Password validation

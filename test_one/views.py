@@ -9,7 +9,7 @@ from test_one.models.user import User_info,UserToken
 from .import tasks
 from test_one.tools.user_tool import *
 from test_one.tools.common import *
-from test_one.tools import redis_pool
+from test_one.tools import redis_pool,cache_tool
 import json
 
 # 信号
@@ -42,14 +42,17 @@ def resdis_test(request):
     print(type(data))
     return JsonResponse(data=data, safe=False)
 
-
+import os
 def tset_user_cz(request):
     user_id = request.GET["user_id"]
+    print(request.META.get("DJANGO_SETTINGS_MODULE"),"DFFFFFFFFFFFFFFFFFFFFF")
+    print(os.environ.get("DJANGO_SETTINGS_MODULE"),"SSSSSSSSSSSSSSSS")
     # User_info.objects.create(user_id=user_id, name="name", password="123456", remark="庐州", mobile="22222")
 
     info = get_user_cache(user_id)
+    print(info,"DDDDDDDDDDDDDDDDDDDDDDDDDDD")
     if not info:
-        values = User_info.objects.filter(user_id=user_id).values_list("password", "mobile")
+        values = User_info.objects.filter(id=user_id).values_list("password", "mobile")
         data = {"password": values[0][0], "mobile": values[0][1]}
         create_user_cache(user_id, data)
         return JsonResponse(data=data, safe=False)
@@ -121,7 +124,7 @@ def user_dl(request):
     if not User_info.user_is_exist(name):
         return JsonResponse({'error_message': "用户名不存在", "status_code": 704})
     u_info = User_info.objects.filter(name=name, state=0).first()
-    if u_info.password != hashlib_tool(password):
+    if u_info.password != make_password(password):
         return JsonResponse({'error_message': "密码错误", "status_code": 705})
 
     data = UserToken.create_or_update_token(u_info.id, create_token(),
@@ -135,6 +138,6 @@ def user_dl(request):
         'password': u_info.password
     }
 
-    redis_pool.delete('user_id_%s' % (u_info.id))
-    redis_pool.set('user_id_%s' % (u_info.id), json.dumps(user_data, ensure_ascii=False))
+    cache_tool.delete_user_cache('user_id_%s' % (u_info.id))
+    cache_tool.create_user_cache('user_id_%s' % (u_info.id), json.dumps(user_data, ensure_ascii=False))
     return JsonResponse(user_data)

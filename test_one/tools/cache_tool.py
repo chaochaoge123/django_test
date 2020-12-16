@@ -1,7 +1,8 @@
 from django.core.cache import cache
+from .data_settings import *
 
 def create_user_cache(user_id, value):
-    cache.set(user_id, value, timeout=300)
+    cache.set(user_id, value, timeout=USER_TIME_OUT)
 
 
 def get_user_cache(user_id):
