@@ -11,6 +11,8 @@ from test_one.tools.user_tool import *
 from test_one.tools.common import *
 from test_one.tools import redis_pool,cache_tool
 import json
+from test_one.tools.response import *
+
 
 # 信号
 work_done = django.dispatch.Signal(providing_args=['path', 'time'])
@@ -94,14 +96,14 @@ def queue_test(request):
 @user_login_required
 def t_gevent(request):
     print(request.user_id,request.token,"DDDDDDDDDDDD")
-    time.sleep(3)
+    # time.sleep(3)
     # user=User_info.objects.filter(id=1).first()
     # u=user.user_id
     # if u==1:
     #     user.user_id=u-1
     #     user.save()
     #     return JsonResponse({'user_id':user.user_id,'messsge':"减数成功"})
-    return JsonResponse({'user_id':0,'messsge':"减数失败"})
+    return APIResponse(data={'user_id':0,'messsge':'减数失败'})
 
 
 
