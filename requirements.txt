@@ -12,7 +12,7 @@ crcmod==1.7
 Django==2.1
 django-celery==3.3.1
 django-redis==4.10.0
-djangorestframework==3.10.3
+djangorestframework==3.11.2
 elasticsearch==5.5.2
 elasticsearch-dsl==5.4.0
 idna==2.8
