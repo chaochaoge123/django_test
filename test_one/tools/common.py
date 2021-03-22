@@ -16,6 +16,7 @@ from Crypto.Cipher import PKCS1_v1_5 as Cipher_PKCS1_v1_5
 import base64
 import xlrd
 import requests
+from openpyxl import Workbook
 
 
 
@@ -106,6 +107,27 @@ def read_execl_data(fpath=None, sheet=None):
     for i in range(1, sh.nrows):
         data_all.append(dict(zip(sh.row_values(0), sh.row_values(i))))
     return data_all
+
+
+def create_execl_data(fpath=None, sheet_name=None, columns=None, datas=None):
+    """
+    生成execl文件
+    :param fpath: 保存目录
+    :param sheet_name: 工作区标题
+    :param columns: 列名
+    :param datas: 数据
+    :return:
+    """
+    if not fpath or not columns or not datas:
+        return None
+    workbook = Workbook()
+    sheet = workbook.active
+    sheet.title = sheet_name if sheet_name else "默认sheet"
+    sheet.append(columns)
+    for data in datas:
+        sheet.append(data)
+
+    workbook.save(fpath)
 
 
 def download_fpath(url=None, fpath=None, name=None):
