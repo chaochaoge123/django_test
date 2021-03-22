@@ -143,3 +143,7 @@ def user_dl(request):
     cache_tool.delete_user_cache('user_id_%s' % (u_info.id))
     cache_tool.create_user_cache('user_id_%s' % (u_info.id), json.dumps(user_data, ensure_ascii=False))
     return JsonResponse(user_data)
+
+
+def img_tools(request):
+    return render(request, "img_tool.html")

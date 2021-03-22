@@ -31,5 +31,6 @@ urlpatterns = [
     url('queue/test', views.queue_test),
     url('t_gevent', views.t_gevent),
     url('user_zhuc', views.user_zc),
-    url('user_denglu',views.user_dl)
+    url('user_denglu', views.user_dl),
+    url('qj/img/', views.img_tools)
 ]

@@ -9,6 +9,8 @@
 
 from .common import *
 
+DEBUG = False
+
 # redis配置
 CACHES = {
     "default": {
