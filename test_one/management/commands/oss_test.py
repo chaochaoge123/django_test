@@ -11,7 +11,7 @@ class Command(BaseCommand):
     @staticmethod
     def add_oss():
 
-        # auth=oss2 .Auth('LTAI4tPApE68Wui2', 'oLPVMEO7ShOEH0fqVche9fT6b90MlQ')
+        # auth=oss2 .Auth('LTAI4tPApE6', 'oLPVMEO7ShOEH0fqVche')
         # bucket = oss2.Bucket(auth, 'http://oss-cn-shanghai.aliyuncs.com', 'qqc-data')
         # 设置存储空间为私有读写权限。
         # bucket.create_bucket(oss2.models.BUCKET_ACL_PRIVATE)
@@ -33,7 +33,7 @@ class Command(BaseCommand):
         # print(res)
 
         # oss域名初始化
-        # auth = oss2.Auth('LTAI4tPApE68Wui2', 'oLPVMEO7ShOEH0fqVche9fT6b90MlQ')
+        # auth = oss2.Auth('LTAI4tPApE68Wu', 'oLPVMEO7ShOEH0fqVche9fT6b9Q')
         # endpoint = 'http://oss-cn-shanghai.aliyuncs.com'
         # bucket = oss2.Bucket(auth, endpoint, 'qqc-data')
         # print(res)
@@ -43,7 +43,7 @@ class Command(BaseCommand):
         # bucket = oss2.Bucket(auth, cname, 'qqc-data', is_cname=True)
 
         # 创建储存空间(qqc-one)
-        # auth = oss2.Auth('LTAI4tPApE68Wui2', 'oLPVMEO7ShOEH0fqVche9fT6b90MlQ')
+        # auth = oss2.Auth('LTAI4tPApE6ui2', 'oLPVMEO7ShOEH0fqhe9fT6b90MlQ')
         # bucket = oss2.Bucket(auth, 'http://oss-cn-shanghai.aliyuncs.com', 'qqc-one')
         # bucketConfig = oss2.models.BucketCreateConfig(oss2.BUCKET_STORAGE_CLASS_STANDARD,
         #                                               oss2.BUCKET_DATA_REDUNDANCY_TYPE_ZRS)
@@ -51,18 +51,18 @@ class Command(BaseCommand):
         # bucket.create_bucket()
 
         # 列举储存空间
-        auth = oss2.Auth('LTAI4tPApE68Wui2', 'oLPVMEO7ShOEH0fqVche9fT6b90MlQ')
+        auth = oss2.Auth('LTAI4tP68Wui2', 'oLPVMEO7ShO0fqVche9fT6b90MlQ')
         service = oss2.Service(auth, 'http://oss-cn-shanghai.aliyuncs.com')
         print([b.name for b in oss2.BucketIterator(service)])
 
         # 查看bucket信息
-        # auth = oss2.Auth('LTAI4tPApE68Wui2', 'oLPVMEO7ShOEH0fqVche9fT6b90MlQ')
+        # auth = oss2.Auth('LTAI4tPAp8Wui2', 'oLPVMEShOEH0fqVche9fT6b90MlQ')
         # bucket = oss2.Bucket(auth, 'http://oss-cn-shanghai.aliyuncs.com', 'qqc-data')
         # res=bucket.get_bucket_info()
         # print(res.name)
 
         #判断文件是否存在
-        # auth = oss2.Auth('LTAI4tPApE68Wui2', 'oLPVMEO7ShOEH0fqVche9fT6b90MlQ')
+        # auth = oss2.Auth('LTAI4tPApWui2', 'oLPVMEO7ShH0fqVche9fT60MlQ')
         # bucket = oss2.Bucket(auth, 'http://oss-cn-shanghai.aliyuncs.com', 'qqc-data')
         # exist = bucket.object_exists('data_img/ac6eddc451da81cbc77979445e66d01608243198.jpg')
         # print(exist)
